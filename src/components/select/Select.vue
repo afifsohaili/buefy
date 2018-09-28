@@ -36,62 +36,62 @@
 </template>
 
 <script>
-    import Icon from '../icon/Icon'
-    import FormElementMixin from '../../utils/FormElementMixin'
+import Icon from '../icon/Icon'
+import FormElementMixin from '../../utils/FormElementMixin'
 
-    export default {
-        name: 'BSelect',
-        components: {
-            [Icon.name]: Icon
+export default {
+    name: 'BSelect',
+    components: {
+        [Icon.name]: Icon
+    },
+    mixins: [FormElementMixin],
+    inheritAttrs: false,
+    props: {
+        value: {
+            type: [String, Number, Boolean, Object, Array, Symbol, Function],
+            default: null
         },
-        mixins: [FormElementMixin],
-        inheritAttrs: false,
-        props: {
-            value: {
-                type: [String, Number, Boolean, Object, Array, Symbol, Function],
-                default: null
-            },
-            placeholder: String,
-            multiple: Boolean,
-            nativeSize: [String, Number]
+        placeholder: String,
+        multiple: Boolean,
+        nativeSize: [String, Number]
+    },
+    data() {
+        return {
+            selected: this.value,
+            _isSelect: true,
+            _elementRef: 'select'
+        }
+    },
+    computed: {
+        spanClasses() {
+            return [this.size, this.statusType, {
+                'is-fullwidth': this.expanded,
+                'is-loading': this.loading,
+                'is-multiple': this.multiple,
+                'is-rounded': this.rounded,
+                'is-empty': this.selected === null
+            }]
+        }
+    },
+    watch: {
+        /**
+         * When v-model is changed:
+         *   1. Set the selected option.
+         *   2. If it's invalid, validate again.
+         */
+        value(value) {
+            this.selected = value
+            !this.isValid && this.checkHtml5Validity()
         },
-        data() {
-            return {
-                selected: this.value,
-                _isSelect: true,
-                _elementRef: 'select'
-            }
-        },
-        computed: {
-            spanClasses() {
-                return [this.size, this.statusType, {
-                    'is-fullwidth': this.expanded,
-                    'is-loading': this.loading,
-                    'is-multiple': this.multiple,
-                    'is-rounded': this.rounded,
-                    'is-empty': this.selected === null
-                }]
-            }
-        },
-        watch: {
-            /**
-             * When v-model is changed:
-             *   1. Set the selected option.
-             *   2. If it's invalid, validate again.
-             */
-            value(value) {
-                this.selected = value
-                !this.isValid && this.checkHtml5Validity()
-            },
-            /**
-             * When selected:
-             *   1. Emit input event to update the user v-model.
-             *   2. If it's invalid, validate again.
-             */
-            selected(value) {
-                this.$emit('input', value)
-                !this.isValid && this.checkHtml5Validity()
-            }
+        /**
+         * When selected:
+         *   1. Emit input event to update the user v-model.
+         *   2. If it's invalid, validate again.
+         */
+        selected(value) {
+            this.$emit('input', value)
+            !this.isValid && this.checkHtml5Validity()
         }
     }
+}
 </script>
