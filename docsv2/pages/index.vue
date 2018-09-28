@@ -91,9 +91,9 @@
 </template>
 
 <script>
-import ScrollReveal from 'scrollreveal'
-import TheNavbar from '../components/TheNavbar'
-import TheFooter from '../components/TheFooter'
+// import ScrollReveal from 'scrollreveal'
+import TheNavbar from '~/components/TheNavbar'
+import TheFooter from '~/components/TheFooter'
 import Package from '../../package.json'
 
 export default {
@@ -108,12 +108,12 @@ export default {
         }
     },
     mounted() {
-        const sr = ScrollReveal({
-            duration: 400,
-            delay: 200
-        })
-        sr.reveal('.home-hero', { delay: 0, origin: 'top' }, 200)
-        sr.reveal('.features', 200)
+        // const sr = ScrollReveal({
+        // duration: 400,
+        // delay: 200
+        // })
+        // sr.reveal('.home-hero', { delay: 0, origin: 'top' }, 200)
+        // sr.reveal('.features', 200)
     }
 }
 </script>
