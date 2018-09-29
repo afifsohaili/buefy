@@ -4,7 +4,7 @@
         class="navbar docs-navbar is-spaced has-shadow">
         <div class="container">
             <div class="navbar-brand">
-                <router-link
+                <nuxt-link
                     to="/"
                     class="navbar-item"
                     title="Buefy: lightweight UI components for Vue.js based on Bulma"
@@ -17,7 +17,7 @@
                         v-else
                         src="../assets/buefy.png"
                         alt="Buefy">
-                </router-link>
+                </nuxt-link>
 
                 <a
                     :class="{ 'has-text-dark': !light }"
@@ -58,20 +58,20 @@
 
             <div :class="{ 'is-active': isMenuActive }" class="navbar-menu">
                 <div class="navbar-end">
-                    <router-link
+                    <nuxt-link
                         to="/"
                         exact
                         class="navbar-item">
                         Home
-                    </router-link>
+                    </nuxt-link>
 
-                    <router-link to="/documentation" class="navbar-item">
+                    <nuxt-link to="/documentation" class="navbar-item">
                         Documentation
-                    </router-link>
+                    </nuxt-link>
 
-                    <router-link to="/extensions" class="navbar-item">
+                    <nuxt-link to="/extensions" class="navbar-item">
                         Extensions
-                    </router-link>
+                    </nuxt-link>
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <div class="navbar-link">Info</div>

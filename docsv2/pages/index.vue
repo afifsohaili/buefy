@@ -34,11 +34,11 @@
                     </div>
 
                     <div class="buttons">
-                        <router-link
+                        <nuxt-link
                             class="button is-medium home-hero"
                             to="/documentation/start">
                             Get started
-                        </router-link>
+                        </nuxt-link>
                         <a
                             class="button is-medium is-primary home-hero"
                             href="https://github.com/buefy/buefy/releases"
