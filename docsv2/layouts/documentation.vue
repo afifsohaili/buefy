@@ -11,7 +11,7 @@
                     <div class="docs-main-container">
                         <TheHeader v-bind="meta"/>
 
-                        <router-view/>
+                        <nuxt/>
 
                         <template v-if="meta.githubPath">
                             <ImproveThis v-bind="meta"/>
@@ -31,7 +31,6 @@ import TheNavbar from '~/components/TheNavbar'
 import TheFooter from '~/components/TheFooter'
 import TheSidebar from '~/components/TheSidebar'
 import ImproveThis from '~/components/ImproveThis'
-import menuData from '~/data/menu'
 
 export default {
     components: {
@@ -47,15 +46,8 @@ export default {
             meta: {}
         }
     },
-    methods: {
-        setMeta(meta) {
-            this.meta = meta
-            this.menu = menuData[this.meta.menu]
-        }
-    },
-    mounted() {
-        this.$eventHub.$on('navigate', this.setMeta)
-        this.setMeta(this.$router.currentRoute.meta)
+    head: {
+        title: 'Documentation | Buefy'
     }
 }
 </script>

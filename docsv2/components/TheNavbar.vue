@@ -148,7 +148,7 @@ export default {
         }
     },
     mounted() {
-        this.$eventHub.$on('navigate', this.closeMenu)
+        // this.$eventHub.$on('navigate', this.closeMenu)
     }
 }
 </script>
