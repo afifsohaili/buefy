@@ -34,7 +34,10 @@ module.exports = {
      ** Plugins to load before mounting the App
      */
     plugins: [
-        '~/plugins/buefy'
+        '~/plugins/buefy',
+        '~/plugins/code-view',
+        '~/plugins/highlight',
+        '~/plugins/pre'
     ],
 
     /*
