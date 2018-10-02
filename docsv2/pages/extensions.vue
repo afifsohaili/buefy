@@ -20,11 +20,11 @@
 </template>
 
 <script>
+import {setPageTitle} from '~/lib/page-title'
+
 export default {
     layout: 'documentation',
-    head: {
-        title: 'Extensions | Buefy'
-    },
+    head: () => setPageTitle('Extensions'),
     fetch({ store }) {
         store.commit('docs/setBreadcrumb', [
             '/',

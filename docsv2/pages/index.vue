@@ -107,6 +107,9 @@ export default {
             version: Package.version
         }
     },
+    head: {
+        title: 'Buefy: lightweight UI components for Vue.js based on Bulma'
+    },
     mounted() {
         // const sr = ScrollReveal({
         // duration: 400,

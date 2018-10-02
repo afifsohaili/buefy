@@ -164,6 +164,8 @@
 
 <script>
 /* eslint-disable no-useless-escape */
+import {setPageTitle} from '~/lib/page-title'
+
 export default {
     layout: 'documentation',
     data() {
@@ -255,6 +257,7 @@ export default {
             'documentation',
             'documentation/start'
         ])
-    }
+    },
+    head: () => setPageTitle('Start')
 }
 </script>

@@ -33,6 +33,8 @@
 </template>
 
 <script>
+import {setPageTitle} from '~/lib/page-title'
+
 export default {
     layout: 'documentation',
     fetch({ store }) {
@@ -41,6 +43,7 @@ export default {
             'documentation',
             'documentation/layout'
         ])
-    }
+    },
+    head: () => setPageTitle('Layout & elements')
 }
 </script>
