@@ -248,6 +248,13 @@ export default {
             materialIcons: '<link rel="stylesheet" href="//cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css">',
             fontAwesome5: '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">'
         }
+    },
+    fetch({ store }) {
+        store.commit('docs/setBreadcrumb', [
+            '/',
+            'documentation',
+            'documentation/start'
+        ])
     }
 }
 </script>

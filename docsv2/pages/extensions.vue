@@ -24,6 +24,12 @@ export default {
     layout: 'documentation',
     head: {
         title: 'Extensions | Buefy'
+    },
+    fetch({ store }) {
+        store.commit('docs/setBreadcrumb', [
+            '/',
+            'extensions'
+        ])
     }
 }
 </script>

@@ -34,6 +34,13 @@
 
 <script>
 export default {
-    layout: 'documentation'
+    layout: 'documentation',
+    fetch({ store }) {
+        store.commit('docs/setBreadcrumb', [
+            '/',
+            'documentation',
+            'documentation/layout'
+        ])
+    }
 }
 </script>

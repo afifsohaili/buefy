@@ -25,13 +25,17 @@ import routes from '~/data/routes'
 
 export default {
     props: {
-        breadcrumb: Array,
         title: String,
         subtitle: String
     },
     data() {
         return {
             routes
+        }
+    },
+    computed: {
+        breadcrumb() {
+            return this.$store.state.docs.breadcrumb
         }
     }
 }
