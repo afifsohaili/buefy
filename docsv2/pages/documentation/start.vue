@@ -257,6 +257,8 @@ export default {
             'documentation',
             'documentation/start'
         ])
+        store.commit('docs/setTitle', 'Start')
+        store.commit('docs/setSubtitle', '<strong>Three ways</strong> to install and use Buefy')
     },
     head: () => setPageTitle('Start')
 }

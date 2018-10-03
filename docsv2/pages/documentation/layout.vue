@@ -43,6 +43,8 @@ export default {
             'documentation',
             'documentation/layout'
         ])
+        store.commit('docs/setTitle', 'Layout & elements')
+        store.commit('docs/setSubtitle', `Buefy has the entire Bulma's core <b>built in</b>. You can use any feature from Bulma, plus all the components Buefy offers`)
     },
     head: () => setPageTitle('Layout & elements')
 }

@@ -24,10 +24,6 @@
 import routes from '~/data/routes'
 
 export default {
-    props: {
-        title: String,
-        subtitle: String
-    },
     data() {
         return {
             routes
@@ -36,6 +32,12 @@ export default {
     computed: {
         breadcrumb() {
             return this.$store.state.docs.breadcrumb
+        },
+        title() {
+            return this.$store.state.docs.title
+        },
+        subtitle() {
+            return this.$store.state.docs.subtitle
         }
     }
 }

@@ -30,6 +30,8 @@ export default {
             '/',
             'extensions'
         ])
+        store.commit('docs/setTitle', 'Extensions')
+        store.commit('docs/setSubtitle', 'See how you can improve Buefy with other packages')
     }
 }
 </script>

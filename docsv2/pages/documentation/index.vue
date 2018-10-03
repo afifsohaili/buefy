@@ -54,6 +54,8 @@ export default {
             '/',
             'documentation'
         ])
+        store.commit('docs/setTitle', 'Documentation')
+        store.commit('docs/setSubtitle', 'Learn everything you need to start using Buefy')
     },
     head: () => setPageTitle('Documentation')
 }
