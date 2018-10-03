@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Buefy from '~/../src'
+import Buefy from '~/../srcv2'
 
 Vue.use(Buefy, {
     // defaultModalScroll: 'keep'

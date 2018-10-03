@@ -17,21 +17,21 @@
 </template>
 
 <script>
-import api from './api/snackbar'
+    import api from './api/snackbar'
 
-import ExSimple from './examples/ExSimple'
-import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimple from './examples/ExSimple'
+    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
 
-export default {
-    data() {
-        return {
-            api,
-            ExSimple,
-            ExSimpleCode,
-            outsideVueInstance: `
+    export default {
+        data() {
+            return {
+                api,
+                ExSimple,
+                ExSimpleCode,
+                outsideVueInstance: `
                 import { Snackbar } from 'buefy/dist/components/snackbar'
                 Snackbar.open('Look at me!')`
+            }
         }
     }
-}
 </script>

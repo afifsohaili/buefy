@@ -17,21 +17,21 @@
 </template>
 
 <script>
-import api from './api/toast'
+    import api from './api/toast'
 
-import ExSimple from './examples/ExSimple'
-import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimple from './examples/ExSimple'
+    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
 
-export default {
-    data() {
-        return {
-            api,
-            ExSimple,
-            ExSimpleCode,
-            outsideVueInstance: `
+    export default {
+        data() {
+            return {
+                api,
+                ExSimple,
+                ExSimpleCode,
+                outsideVueInstance: `
                 import { Toast } from 'buefy/dist/components/toast'
                 Toast.open('Toasty!')`
+            }
         }
     }
-}
 </script>

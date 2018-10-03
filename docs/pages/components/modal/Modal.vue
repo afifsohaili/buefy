@@ -19,35 +19,35 @@
 </template>
 
 <script>
-import api from './api/modal'
+    import api from './api/modal'
 
-import ExSimple from './examples/ExSimple'
-import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
+    import ExSimple from './examples/ExSimple'
+    import ExSimpleCode from '!!raw-loader!./examples/ExSimple'
 
-import ExComponent from './examples/ExComponent'
-import ExComponentCode from '!!raw-loader!./examples/ExComponent'
+    import ExComponent from './examples/ExComponent'
+    import ExComponentCode from '!!raw-loader!./examples/ExComponent'
 
-import ExProgrammatic from './examples/ExProgrammatic'
-import ExProgrammaticCode from '!!raw-loader!./examples/ExProgrammatic'
+    import ExProgrammatic from './examples/ExProgrammatic'
+    import ExProgrammaticCode from '!!raw-loader!./examples/ExProgrammatic'
 
-export default {
-    data() {
-        return {
-            api,
-            ExSimple,
-            ExComponent,
-            ExProgrammatic,
-            ExSimpleCode,
-            ExComponentCode,
-            ExProgrammaticCode,
-            programmaticSyntax: `
-            // From inside Vue instance
-            this.$modal.open(props)
+    export default {
+        data() {
+            return {
+                api,
+                ExSimple,
+                ExComponent,
+                ExProgrammatic,
+                ExSimpleCode,
+                ExComponentCode,
+                ExProgrammaticCode,
+                programmaticSyntax: `
+                // From inside Vue instance
+                this.$modal.open(props)
 
-            // From outside Vue instance
-            import { ModalProgrammatic } from 'buefy/dist/components/modal'
-            ModalProgrammatic.open(props)`
+                // From outside Vue instance
+                import { ModalProgrammatic } from 'buefy/dist/components/modal'
+                ModalProgrammatic.open(props)`
+            }
         }
     }
-}
 </script>
