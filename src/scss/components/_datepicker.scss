@@ -13,7 +13,7 @@
         border-bottom: 1px solid $grey-lighter;
     }
     .datepicker-content {
-        height: 16.25rem;   
+        height: 16.25rem;
     }
     .datepicker-footer {
         margin-top: 0.875rem;
@@ -74,6 +74,22 @@
                 &.is-selected {
                     background-color: $primary;
                     color: $primary-invert;
+                    &.is-within {
+                        background-color: rgba($primary, 0.5);
+                        border-radius: 0;
+                    }
+                    &.is-first {
+                        border-bottom-right-radius: 0;
+                        border-top-right-radius: 0;
+                    }
+                    &.is-last {
+                        border-bottom-left-radius: 0;
+                        border-top-left-radius: 0;
+                    }
+                    &.is-within:hover, &.is-first:hover, &.is-last:hover {
+                        background-color: $background;
+                        color: $black;
+                    }
                 }
                 &.is-nearby:not(.is-selected) {
                     color: $grey-light;
